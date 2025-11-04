@@ -8,7 +8,6 @@ import Experience from "./assets/experience_bar_background.png";
 import styles from "./page.module.css";
 
 // Importar los sistemas individuales o GameFacade aquí
-import { GameFacade } from "./core/GameFacade";
 
 export default function HomePageNoFacade() {
   const [currentLine, setCurrentLine] = useState<string>("");
@@ -20,8 +19,6 @@ export default function HomePageNoFacade() {
       let lines: string[] = [];
 
       // Usar GameFacade o las clases para iniciar el juego
-      const facade = new GameFacade();
-      lines = facade.startGame();
 
       for (const line of lines) {
         setCurrentLine(line);
